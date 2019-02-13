@@ -18,9 +18,9 @@ begin
 
    clock : process
         begin
-          CLK <= '1';
-          wait for 5 ns;
           CLK <= '0';
+          wait for 5 ns;
+          CLK <= '1';
           wait for 5 ns;
         end process clock;
         
@@ -36,15 +36,16 @@ begin
         COM_1_i <= '0';        
         RA_i <= "0000";
         RB_i <= "1111";
+        WE_i <= '1';
+        RW_i <= "0000";
         OP_i <= "01";
         
         wait for 5 ns;
         
-        WE_i <= '1';
         RW_i <= "0001";
 
         OK <= (S_i = X"00000030");
-        OK <= (N_i = '0');
+        --OK <= (N_i = '0');
         
         wait for 5 ns;
         
@@ -64,7 +65,112 @@ begin
         RW_i <= "0001";
 
         OK <= (S_i = X"00000060");
-        OK <= (N_i = '0');
+        --OK <= (N_i = '0');
+        
+        wait for 5 ns;
+        
+        -- R(2) = R(15) + 16
+        
+        Imm_i <= "00010000";
+        WrEn_i <= '0';
+        COM_2_i <= '0';
+        COM_1_i <= '1';
+        RA_i <= "1111";
+        RB_i <= "0000";
+        OP_i <= "00";
+
+        
+        wait for 5 ns;
+        
+        RW_i <= "0010";
+
+        OK <= (S_i = X"00000040");
+        --OK <= (N_i = '0');
+        
+        wait for 5 ns;
+        
+        -- R(2) = R(2) - R(15)
+        
+        Imm_i <= "00000000";
+        WrEn_i <= '0';
+        COM_2_i <= '0';
+        COM_1_i <= '0';
+        RA_i <= "0010";
+        RB_i <= "1111";
+        OP_i <= "10";
+
+        
+        wait for 5 ns;
+        
+        RW_i <= "0010";
+
+        OK <= (S_i = X"00000010");
+        --OK <= (N_i = '0');
+        
+        wait for 5 ns;
+        
+        -- R(2) = R(2) - 16
+        
+        Imm_i <= "00010000";
+        WrEn_i <= '0';
+        COM_2_i <= '0';
+        COM_1_i <= '1';
+        RA_i <= "0010";
+        RB_i <= "0000";
+        OP_i <= "10";
+
+        
+        wait for 5 ns;
+        
+        RW_i <= "0010";
+
+        OK <= (S_i = X"00000000");
+        --OK <= (N_i = '0');
+        
+        wait for 5 ns;
+        
+        -- R(4) = LW 0(63)
+        
+        Imm_i <= "00111111";
+        WrEn_i <= '0';
+        COM_2_i <= '1';
+        COM_1_i <= '1';
+        RA_i <= "0000";
+        RB_i <= "0000";
+        OP_i <= "00";
+
+        
+        wait for 5 ns;
+        
+        RW_i <= "0100";
+
+        OK <= (S_i = X"00000003");
+        --OK <= (N_i = '0');
+        
+        wait for 5 ns;
+        
+        -- SW R(4), 0(0)
+        
+        Imm_i <= "00000000";
+        WrEn_i <= '1';
+        WE_i <= '0';
+        COM_2_i <= '1';
+        COM_1_i <= '1';
+        RA_i <= "0000";
+        RB_i <= "0100";
+        OP_i <= "00";
+
+        
+        wait for 5 ns;
+        
+
+        OK <= (S_i = X"00000003");
+        --OK <= (N_i = '0');
+        
+        wait for 5 ns;
+        
+        WrEn_i <= '1';
+        WE_i <= '0';
         
         wait;
       end process;

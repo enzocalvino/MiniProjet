@@ -16,4 +16,4 @@ add wave -radix decimal *
 add wave -position insertpoint  \
 sim:/top_trait_unit_tb/C0/Banc_comp/Banc
 
-run -all
+run 100 ns

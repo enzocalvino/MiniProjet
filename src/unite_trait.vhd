@@ -20,9 +20,15 @@ architecture RTL of unite_trait is
   
 begin
   
-  C0 : entity work.banc port map(CLK => CLK, RST => RST, W => busW, RA => RA, RB => RB, RW => RW, WE => WE, A => busA, B => busB);
+  C0 : entity work.banc port map(CLK => CLK, RST => RST, 
+                                  W => busW, RA => RA, 
+                                  RB => RB, RW => RW, 
+                                  WE => WE, A => busA, 
+                                  B => busB);
     
-  C1 : entity work.ALU port map(OP => OP, A => busA, B => busB, S => busW, N => N);
+    
+  C1 : entity work.ALU port map(OP => OP, A => busA, 
+                                B => busB, S => busW, N => N);
     
   S <= busW;
     

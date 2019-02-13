@@ -50,7 +50,9 @@ architecture RTL of top_trait_unit is
                                                           DataIn => busB,
                                                           DataOut => Dataout);
   
-  MUX_2_comp : entity work.mux21 port map(A => ALUout, B => DataOut,
-                                          COM => COM_2, S => S);
+  MUX_2_comp : entity work.mux21 generic map(N => 32) 
+                                  port map(A => ALUout, B => DataOut,
+                                          COM => COM_2, S => busW);
+  S <= busW;
                                           
 end RTL;
