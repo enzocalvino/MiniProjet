@@ -14,20 +14,20 @@ entity PC is
 end PC;
 
 architecture RTL of PC is
-  
+
   Signal PC_i : std_logic_vector(31 downto 0);
   begin
-    
+
     PC <= PC_i;
-  
+
   process(CLK, RST)
     begin
-      
+
       if RST = '1' then
         PC_i <= (others => '0');
-        
+
       elsif rising_edge(CLK) then
-        
+
           if nPCsel = '1' then
             PC_i <= std_logic_vector(unsigned(PC_i) + 1 + unsigned(offset));
 
@@ -35,7 +35,7 @@ architecture RTL of PC is
             PC_i <= std_logic_vector(unsigned(PC_i) + 1);
 
           end if;
-        
+
       end if;
   end process;
   end RTL;
