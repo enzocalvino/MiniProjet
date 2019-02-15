@@ -9,6 +9,7 @@ end top_trait_unit_tb;
 architecture tb of top_trait_unit_tb is
   
 Signal CLK, RST, N_i, WE_i, WrEn_i, COM_1_i, COM_2_i : std_logic;
+SIgnal RegSel_i : std_logic;
 Signal Imm_i : std_logic_vector(7 downto 0);
 Signal OP_i : std_logic_vector(1 downto 0);
 Signal RA_i, RB_i, RW_i : std_logic_vector(3 downto 0);
@@ -30,6 +31,7 @@ begin
         -- R(1) = R(15)
         
         RST <= '0';
+        RegSel_i <= '0';
         Imm_i <= (others => '0');
         WrEn_i <= '0';
         COM_2_i <= '0';
@@ -179,9 +181,9 @@ begin
                                                 Imm => Imm_i, WE => WE_i, 
                                                 WrEn => WrEn_i, COM_1 => COM_1_i,
                                                 COM_2 => COM_2_i, OP => OP_i, 
-                                                RA => RA_i, RB => RB_i, 
-                                                RW => RW_i, N => N_i, 
-                                                S => S_i);
+                                                RN => RA_i, RM => RB_i, 
+                                                RD => RW_i, N => N_i, 
+                                                S => S_i, RegSel => RegSel_i);
 
     end tb; 
     

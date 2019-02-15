@@ -5,9 +5,6 @@ use IEEE.numeric_std.all;
 entity processeur is 
 port(
         CLK,RST : in std_logic;
-        offset : in std_logic_vector(23 downto 0);
-        Imm : in std_logic_vector(7 downto 0);
-        RN, RD, RM : in std_logic_vector(3 downto 0);
         S : out std_logic_vector(31 downto 0)
         
 );
@@ -22,8 +19,10 @@ architecture RTL of processeur is
   
   begin
     
+    flag(30 downto 0) <= (others => '0');
+    
     Gestion_instruct: entity work.unite_gestion port map(CLK => CLK, RST => RST,
-                                                          offset => offset, nPCsel => nPCsel,
+                                                          offset => instruction(23 downto 0), nPCsel => nPCsel,
                                                           instruction => instruction);
     
     Decode_instruction: entity work.decodeurinstructions port map(instruction => instruction,
@@ -36,9 +35,10 @@ architecture RTL of processeur is
                                         CLK => CLK, WE => PSREn, DataOut => PSR);
                                         
     Unite_Traitement: entity work.top_trait_unit port map(CLK => CLK, RST => RST, RegSel => RegSel,
-                                                Imm => Imm, WE => RegWr, WrEn => MemWr, COM_1 => ALUSrc,
-                                                COM_2 => WrSrc, OP => ALUctr, RN => RN, 
-                                                RD => RD, RM => RM, N => flag(31), S => S);
+                                                Imm => instruction(7 downto 0), WE => RegWr, WrEn => MemWr, COM_1 => ALUSrc,
+                                                COM_2 => WrSrc, OP => ALUctr, RN => instruction(19 downto 16), 
+                                                RD =>instruction(15 downto 12) , RM => instruction(3 downto 0),
+                                                N => flag(31), S => S);
                                                                                          
   end rtl;
         

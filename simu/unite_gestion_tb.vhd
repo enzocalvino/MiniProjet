@@ -23,12 +23,14 @@ begin
         testbench: process
         begin
         RST <= '1';
+        offset <= (others => '0');
+        nPCsel <= '0';
         
         wait for 5 ns;
         
         RST <= '0';
         nPCsel <= '0';
-        offset <= X"000005";
+        offset <= X"FFFFFA";
         
         wait for 50 ns;
       

@@ -16,7 +16,7 @@ L5
 V:^;JA?::VD]M8=4OHh31z3
 Z8 OV;C;10.1d;51
 31
-Z9 !s108 1550066986.046120
+Z9 !s108 1550247046.262403
 Z10 !s90 -reportprogress|300|-93|../src/ALU.vhd|
 Z11 !s107 ../src/ALU.vhd|
 Z12 o-93 -O0
@@ -41,7 +41,7 @@ R13
 !s100 S_HP9Jh`i4K?;1j?kTiYc1
 !i10b 1
 Ebanc
-Z15 w1550065311
+Z15 w1550237016
 R2
 R3
 R4
@@ -53,7 +53,7 @@ L5
 VV5K<ZGYdJOTQgL5R6:fYd0
 R8
 31
-Z18 !s108 1550066985.972914
+Z18 !s108 1550247046.185408
 Z19 !s90 -reportprogress|300|-93|../src/banc.vhd|
 Z20 !s107 ../src/banc.vhd|
 R12
@@ -67,7 +67,7 @@ R4
 Z21 DEx4 work 4 banc 0 22 V5K<ZGYdJOTQgL5R6:fYd0
 l37
 L18
-VEjamofdO7UoLEj@<@;9eQ0
+VDUN:@>jfT@MXGNIVShG:I1
 R8
 31
 R18
@@ -75,10 +75,10 @@ R19
 R20
 R12
 R13
-!s100 JM^:C]mCZ_]ag4e>E6lGV3
+!s100 nkGY1W_OlTH3AHzO[HeJA3
 !i10b 1
 Edecodeurinstructions
-Z22 w1550077076
+Z22 w1550246243
 R2
 R3
 R4
@@ -87,126 +87,126 @@ Z23 8/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src
 Z24 F/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/decodeurInstructions.vhd
 l0
 L6
-V5gSPCnj9iMLK8JShi6bVX3
-!s100 ?cRI]2oDjVHnPmiUC3Gc^2
+V:Pz@QK1:bh_<ZG:UJ^3YX0
 R8
-32
-!i10b 1
-Z25 !s108 1550077079.185751
-Z26 !s90 -reportprogress|300|-work|work|-O0|/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/decodeurInstructions.vhd|
+31
+Z25 !s108 1550246277.932781
+Z26 !s90 -reportprogress|300|-93|-O0|/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/decodeurInstructions.vhd|
 Z27 !s107 /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/decodeurInstructions.vhd|
-Z28 o-work work -O0
+R12
 R13
+!s100 ?cRI]2oDjVHnPmiUC3Gc^2
+!i10b 1
 Artl
 R2
 R3
 R4
-Z29 DEx4 work 20 decodeurinstructions 0 22 5gSPCnj9iMLK8JShi6bVX3
+Z28 DEx4 work 20 decodeurinstructions 0 22 :Pz@QK1:bh_<ZG:UJ^3YX0
 l20
 L15
-Vz7g4]594SAiaW[oQVzE`R0
-!s100 Z=P39bRB0IX^@oAMHzTOd3
+VjUi4Ol;SWcXjolh?kVD6;1
 R8
-32
-!i10b 1
+31
 R25
 R26
 R27
-R28
+R12
 R13
+!s100 Jo1;d3lGKW5?if4LTR3TK1
+!i10b 1
 Eextensionpc
-Z30 w1550009219
-Z31 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z29 w1550009219
+Z30 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
 R3
 R4
 R5
-Z32 8/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/extensionPC.vhd
-Z33 F/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/extensionPC.vhd
+Z31 8../src/extensionPC.vhd
+Z32 F../src/extensionPC.vhd
 l0
 L5
-VKLCg02d:`GJzfBeAGEbQl0
+V9Ok[c;`aMfLj@?mAzUOA]0
 R8
-32
-Z34 !s108 1550068389.231309
-Z35 !s90 -reportprogress|300|-work|work|/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/extensionPC.vhd|
-Z36 !s107 /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/extensionPC.vhd|
-R28
+31
+Z33 !s108 1550157308.500348
+Z34 !s90 -reportprogress|300|-93|../src/ALU.vhd|../src/PC.vhd|../src/banc.vhd|../src/decodeurInstructions.vhd|../src/extensionPC.vhd|../src/extensionSigne.vhd|../src/memoireDonnees.vhd|../src/memoireInstructions.vhd|../src/mux21.vhd|../src/processeur.vhd|../src/reg32bit.vhd|../src/top_trait_unit.vhd|../src/uniteGestion.vhd|../src/unite_trait.vhd|
+Z35 !s107 ../src/unite_trait.vhd|../src/uniteGestion.vhd|../src/top_trait_unit.vhd|../src/reg32bit.vhd|../src/processeur.vhd|../src/mux21.vhd|../src/memoireInstructions.vhd|../src/memoireDonnees.vhd|../src/extensionSigne.vhd|../src/extensionPC.vhd|../src/decodeurInstructions.vhd|../src/banc.vhd|../src/PC.vhd|../src/ALU.vhd|
+R12
 R13
 !s100 :PG=b_2U]0fV;K7mQL29L3
 !i10b 1
 Artl
-R31
+R30
 R3
 R4
-Z37 DEx4 work 11 extensionpc 0 22 KLCg02d:`GJzfBeAGEbQl0
+Z36 DEx4 work 11 extensionpc 0 22 9Ok[c;`aMfLj@?mAzUOA]0
 l14
 L12
-VRBilg3:WERRaFjcmP`8R<3
+V=8>?fOciK@1:lFJH;l5^`0
 R8
-32
+31
+R33
 R34
 R35
-R36
-R28
+R12
 R13
 !s100 CF0VGG1aj0BzGgk`km1>i0
 !i10b 1
 Eextensionsigne
-Z38 w1549545454
-R31
+Z37 w1549545454
+R30
 R2
 R3
 R4
 R5
-Z39 8../src/extensionSigne.vhd
-Z40 F../src/extensionSigne.vhd
+Z38 8../src/extensionSigne.vhd
+Z39 F../src/extensionSigne.vhd
 l0
 L6
 V<hWdLK^9o3YZ1fEdY56:63
 R8
 31
-Z41 !s108 1550066986.198080
-Z42 !s90 -reportprogress|300|-93|../src/extensionSigne.vhd|
-Z43 !s107 ../src/extensionSigne.vhd|
+Z40 !s108 1550247046.399872
+Z41 !s90 -reportprogress|300|-93|../src/extensionSigne.vhd|
+Z42 !s107 ../src/extensionSigne.vhd|
 R12
 R13
 !s100 N;CA`VjaXlFTA2GllTM5z1
 !i10b 1
 Artl
-R31
+R30
 R2
 R3
 R4
-Z44 DEx4 work 14 extensionsigne 0 22 <hWdLK^9o3YZ1fEdY56:63
+Z43 DEx4 work 14 extensionsigne 0 22 <hWdLK^9o3YZ1fEdY56:63
 l16
 L14
 VhCRV=;hJji94QlZ5QgDcO3
 R8
 31
+R40
 R41
 R42
-R43
 R12
 R13
 !s100 a4@EJXlVB8NR2m;GdXVG`0
 !i10b 1
 Einstruction_memory
-Z45 w1550068371
+Z44 w1550150719
 R2
 R3
 R4
 R5
-Z46 8/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/memoireInstructions.vhd
-Z47 F/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/memoireInstructions.vhd
+Z45 8../src/memoireInstructions.vhd
+Z46 F../src/memoireInstructions.vhd
 l0
 L5
-VBBK]E[f1M>PAe`2917YZ;1
+V>723d[2183j[iP`0Gzmhm2
 R8
-32
-Z48 !s108 1550068375.016643
-Z49 !s90 -reportprogress|300|-work|work|-O0|/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/memoireInstructions.vhd|
-Z50 !s107 /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/memoireInstructions.vhd|
-R28
+31
+R33
+R34
+R35
+R12
 R13
 !s100 ka<:POBm8B`RBW^^MCmE21
 !i10b 1
@@ -214,35 +214,35 @@ Artl
 R2
 R3
 R4
-Z51 DEx4 work 18 instruction_memory 0 22 BBK]E[f1M>PAe`2917YZ;1
+Z47 DEx4 work 18 instruction_memory 0 22 >723d[2183j[iP`0Gzmhm2
 l35
 L12
-VcaV3YXQj<hV2jaB:HecBE0
+VV@=?hMfXQWT=e_aPcYfjo0
 R8
-32
-R48
-R49
-R50
-R28
+31
+R33
+R34
+R35
+R12
 R13
 !s100 IH<8_B1B?zI;;mj_I7XSM3
 !i10b 1
 Ememoiredonnees
-Z52 w1549550612
+Z48 w1550244748
 R2
 R3
 R4
 R5
-Z53 8/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/memoireDonnees.vhd
-Z54 F/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/memoireDonnees.vhd
+Z49 8../src/memoireDonnees.vhd
+Z50 F../src/memoireDonnees.vhd
 l0
 L5
 VC1ZC`ld2ji]W0D7CeZ?F@0
 R8
 31
-Z55 !s108 1550070144.657122
-Z56 !s90 -reportprogress|300|-93|-O0|/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/memoireDonnees.vhd|
-Z57 !s107 /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/memoireDonnees.vhd|
+Z51 !s108 1550247046.471937
+Z52 !s90 -reportprogress|300|-93|../src/memoireDonnees.vhd|
+Z53 !s107 ../src/memoireDonnees.vhd|
 R12
 R13
 !s100 KHzZ9O^_=GTKiW^E5KM=J0
@@ -251,55 +251,55 @@ Artl
 R2
 R3
 R4
-Z58 DEx4 work 14 memoiredonnees 0 22 C1ZC`ld2ji]W0D7CeZ?F@0
-l35
+Z54 DEx4 work 14 memoiredonnees 0 22 C1ZC`ld2ji]W0D7CeZ?F@0
+l57
 L15
-Vhf;P4VJBUVn_GoE3IRzXM2
+VmH@>d9;65_hS]V8;fScD`2
 R8
 31
-R55
-R56
-R57
+R51
+R52
+R53
 R12
 R13
-!s100 ElnN8=:<3Fl9fBLXQ9Z^T0
+!s100 ^@f[bczEM>=G19?NcjOn_3
 !i10b 1
 Ememoireinstructions
-R30
+R29
 R2
 R3
 R4
 R5
-R46
-R47
+8/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/memoireInstructions.vhd
+F/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/memoireInstructions.vhd
 l0
 L5
 V?8:VW8_a;XMb2_n`d]]F<3
 R8
 32
-R28
+o-work work -O0
 R13
-R50
+!s107 /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/memoireInstructions.vhd|
 !s100 dDEEQYg83M;0@;NGDZRF<3
 !i10b 1
 !s108 1550067335.661029
 !s90 -reportprogress|300|-work|work|/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/memoireInstructions.vhd|
 Emux21
-Z59 w1549553411
+Z55 w1549553411
 R2
 R3
 R4
 R5
-Z60 8../src/mux21.vhd
-Z61 F../src/mux21.vhd
+Z56 8../src/mux21.vhd
+Z57 F../src/mux21.vhd
 l0
 L5
 VJ[ngmkoa4ONWJ34B?Zi073
 R8
 31
-Z62 !s108 1550066986.122094
-Z63 !s90 -reportprogress|300|-93|../src/mux21.vhd|
-Z64 !s107 ../src/mux21.vhd|
+Z58 !s108 1550247046.330941
+Z59 !s90 -reportprogress|300|-93|../src/mux21.vhd|
+Z60 !s107 ../src/mux21.vhd|
 R12
 R13
 !s100 Am?@O6^Z:DZJDni>FkKZD0
@@ -308,36 +308,36 @@ Artl
 R2
 R3
 R4
-Z65 DEx4 work 5 mux21 0 22 J[ngmkoa4ONWJ34B?Zi073
+Z61 DEx4 work 5 mux21 0 22 J[ngmkoa4ONWJ34B?Zi073
 l15
 L14
 V;_eUfgVi7@46bV;aQ_]HL3
 R8
 31
-R62
-R63
-R64
+R58
+R59
+R60
 R12
 R13
 !s100 1Mf[ci0:Gz];?a25<jZCI2
 !i10b 1
 Epc
-Z66 w1550069342
+Z62 w1550249041
 R2
 R3
 R4
 R5
-Z67 8/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/PC.vhd
-Z68 F/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/PC.vhd
+Z63 8/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/PC.vhd
+Z64 F/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/PC.vhd
 l0
 L6
-VjheL?aAA?6ZQC3L0W>S420
+VgGKI_A3bjl7l:L5?QWjIe3
 R8
-32
-Z69 !s108 1550069349.532796
-Z70 !s90 -reportprogress|300|-work|work|/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/PC.vhd|
-Z71 !s107 /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/PC.vhd|
-R28
+31
+Z65 !s108 1550249044.127300
+Z66 !s90 -reportprogress|300|-93|-O0|/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/PC.vhd|
+Z67 !s107 /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/PC.vhd|
+R12
 R13
 !s100 b^0ae?K2z6Z5LmPPNTgo<1
 !i10b 1
@@ -345,36 +345,115 @@ Artl
 R2
 R3
 R4
-Z72 DEx4 work 2 pc 0 22 jheL?aAA?6ZQC3L0W>S420
+Z68 DEx4 work 2 pc 0 22 gGKI_A3bjl7l:L5?QWjIe3
 l19
 L16
-VVgX=ZR7AXI>_eCUEJcoUO2
+VdaLYOm>[<EFei8BojokzK1
 R8
-32
-R69
-R70
-R71
-R28
+31
+R65
+R66
+R67
+R12
 R13
 !s100 PA:bGUB:>RBCCHg]>C=6;0
 !i10b 1
-Ereg32bit
-Z73 w1550072088
+Eprocesseur
+Z69 w1550245204
 R2
 R3
 R4
 R5
-Z74 8/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/reg32bit.vhd
-Z75 F/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/reg32bit.vhd
+Z70 8/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/processeur.vhd
+Z71 F/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/processeur.vhd
 l0
 L5
-V^RYlbL^GU8>4mJfY3]4CN0
+VP5Qd?GnANE@VG^22PP1cF3
 R8
-32
-Z76 !s108 1550072090.927540
-Z77 !s90 -reportprogress|300|-work|work|-O0|/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/reg32bit.vhd|
-Z78 !s107 /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/reg32bit.vhd|
+31
+Z72 !s108 1550245208.094910
+Z73 !s90 -reportprogress|300|-93|-O0|/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/processeur.vhd|
+Z74 !s107 /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/processeur.vhd|
+R12
+R13
+!s100 XJ_>;[Ag`JDGefd:B>mK]2
+!i10b 1
+Artl
+Z75 DEx4 work 14 top_trait_unit 0 22 `@MDkgXLg:Xg=1]zPE0@n1
+Z76 DEx4 work 8 reg32bit 0 22 nAGGBQZl42lDE9A=LIIlC0
 R28
+Z77 DEx4 work 13 unite_gestion 0 22 ]K25[^HU@HIn;7]j1[Od91
+R2
+R3
+R4
+Z78 DEx4 work 10 processeur 0 22 P5Qd?GnANE@VG^22PP1cF3
+l22
+L16
+Vd7=dCZdaoJilWbGW;F<<`1
+R8
+31
+R72
+R73
+R74
+R12
+R13
+!s100 HTWk@PBPi:5f5z^[LHR`h1
+!i10b 1
+Eprocesseur_tb
+Z79 w1550244188
+R2
+R3
+R4
+R5
+Z80 8processeur_tb.vhd
+Z81 Fprocesseur_tb.vhd
+l0
+L5
+V7Y@`z_Ih04zed6VJ3FkD83
+!s100 IR5IC>CTS4lE^G6TN8Wk21
+R8
+31
+!i10b 1
+Z82 !s108 1550249618.713276
+Z83 !s90 -reportprogress|300|-93|processeur_tb.vhd|
+Z84 !s107 processeur_tb.vhd|
+R12
+R13
+Atb
+R78
+R2
+R3
+R4
+Z85 DEx4 work 13 processeur_tb 0 22 7Y@`z_Ih04zed6VJ3FkD83
+l13
+L8
+Z86 V9SMgXKEleRmO^miHiJd^M1
+Z87 !s100 ZQ`fSCYM;_h7mfkXai;mI1
+R8
+31
+!i10b 1
+R82
+R83
+R84
+R12
+R13
+Ereg32bit
+Z88 w1550241966
+R2
+R3
+R4
+R5
+Z89 8/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/reg32bit.vhd
+Z90 F/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/reg32bit.vhd
+l0
+L5
+VnAGGBQZl42lDE9A=LIIlC0
+R8
+31
+Z91 !s108 1550241972.386433
+Z92 !s90 -reportprogress|300|-93|-O0|/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/reg32bit.vhd|
+Z93 !s107 /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/reg32bit.vhd|
+R12
 R13
 !s100 OHGO6jWY0;G3_O;<BVg7?0
 !i10b 1
@@ -382,240 +461,241 @@ Artl
 R2
 R3
 R4
-DEx4 work 8 reg32bit 0 22 ^RYlbL^GU8>4mJfY3]4CN0
+R76
 l17
 L14
-VADDn^5b3XQeBGj2RRgoFA2
+VzQMN@``B2W55zKXQYKz:N1
 R8
-32
-R76
-R77
-R78
-R28
+31
+R91
+R92
+R93
+R12
 R13
-!s100 PJmmG[6bf3ejoF42iT44A1
+!s100 f1N]E<?n`h`bSW8W8``9E0
 !i10b 1
 Etop_trait_unit
-Z79 w1550065550
+Z94 w1550157059
 R2
 R3
 R4
 R5
-Z80 8../src/top_trait_unit.vhd
-Z81 F../src/top_trait_unit.vhd
+Z95 8../src/top_trait_unit.vhd
+Z96 F../src/top_trait_unit.vhd
 l0
 L5
-V_TJ`eRMA]5SbLWK2DdXIW2
+V`@MDkgXLg:Xg=1]zPE0@n1
 R8
 31
-Z82 !s108 1550066986.336778
-Z83 !s90 -reportprogress|300|-93|../src/top_trait_unit.vhd|
-Z84 !s107 ../src/top_trait_unit.vhd|
+Z97 !s108 1550247046.542775
+Z98 !s90 -reportprogress|300|-93|../src/top_trait_unit.vhd|
+Z99 !s107 ../src/top_trait_unit.vhd|
 R12
 R13
-!s100 0YGSlg6KD7E9GkTLGnXdZ2
+!s100 RVPn;ZdUD7>`b^h3A:`LK0
 !i10b 1
 Artl
-R58
+R54
 R14
-R65
-R31
-R44
+R30
+R43
 R21
+R61
 R2
 R3
 R4
-Z85 DEx4 work 14 top_trait_unit 0 22 _TJ`eRMA]5SbLWK2DdXIW2
-l28
-L20
-V[Vf9hSkgWMd[3Lle7ON032
+R75
+l30
+L21
+VW5dW;[R=[E<Kd622]S^C50
 R8
 31
-R82
-R83
-R84
+R97
+R98
+R99
 R12
 R13
-!s100 ?lnbKHei2?D@XEQE^GF<B2
+!s100 38fSce`GfA78ZU8TH@CW<1
 !i10b 1
 Etop_trait_unit_tb
-Z86 w1550066983
+Z100 w1550237920
 R2
 R3
 R4
 R5
-Z87 8top_trait_unit_tb.vhd
-Z88 Ftop_trait_unit_tb.vhd
+Z101 8top_trait_unit_tb.vhd
+Z102 Ftop_trait_unit_tb.vhd
 l0
 L5
 V4Wd<7O<l[[>3Z7:jM]7PV1
 R8
 31
-Z89 !s108 1550066986.426021
-Z90 !s90 -reportprogress|300|-93|top_trait_unit_tb.vhd|
-Z91 !s107 top_trait_unit_tb.vhd|
+Z103 !s108 1550247046.625963
+Z104 !s90 -reportprogress|300|-93|top_trait_unit_tb.vhd|
+Z105 !s107 top_trait_unit_tb.vhd|
 R12
 R13
 !s100 fPO<E[dHLHeSK;9T^PJJk3
 !i10b 1
 Atb
-R85
+R75
 R2
 R3
 R4
 DEx4 work 17 top_trait_unit_tb 0 22 4Wd<7O<l[[>3Z7:jM]7PV1
-l17
+l18
 L9
-VcN00F2[XZbk[O==FQ3R7F1
+Va8Dg]L2UVkn9hXI@]CHPj3
 R8
 31
-R89
-R90
-R91
+R103
+R104
+R105
 R12
 R13
-!s100 XB]3k8ogGMdCbnjHTIP922
+!s100 nSgaE3TOEK7=G[=i;bo=a1
 !i10b 1
 Eunite_gestion
-Z92 w1550070178
+Z106 w1550077261
 R2
 R3
 R4
 R5
-Z93 8/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/uniteGestion.vhd
-Z94 F/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/uniteGestion.vhd
+Z107 8/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/uniteGestion.vhd
+Z108 F/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/uniteGestion.vhd
 l0
 L6
-V8Iz4CR7Ebi92g>DB6DR4L1
+V]K25[^HU@HIn;7]j1[Od91
 R8
-32
-Z95 !s108 1550070181.254333
-Z96 !s90 -reportprogress|300|-work|work|-O0|/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/uniteGestion.vhd|
-Z97 !s107 /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/uniteGestion.vhd|
-R28
+31
+Z109 !s108 1550249087.316027
+Z110 !s90 -reportprogress|300|-93|-O0|/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/uniteGestion.vhd|
+Z111 !s107 /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/src/uniteGestion.vhd|
+R12
 R13
 !s100 NOGX@_k<jJh^f60[g528=2
 !i10b 1
 Artl
-R51
-R72
-R31
-R37
+R47
+R68
+R30
+R36
 R2
 R3
 R4
-Z98 DEx4 work 13 unite_gestion 0 22 8Iz4CR7Ebi92g>DB6DR4L1
+R77
 l21
 L16
-VNal^^cV@W83;hD_0;D8Zc0
+VoT?fB@9[<]nUVh3ib=Lf[1
 R8
-32
-R95
-R96
-R97
-R28
+31
+R109
+R110
+R111
+R12
 R13
 !s100 j2:]@T=?f[fbX_4lk0b5I3
 !i10b 1
 Eunite_gestion_tb
-Z99 w1550071278
+Z112 w1550249084
 R2
 R3
 R4
 R5
-Z100 8/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/simu/unite_gestion_tb.vhd
-Z101 F/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/simu/unite_gestion_tb.vhd
+Z113 8unite_gestion_tb.vhd
+Z114 Funite_gestion_tb.vhd
 l0
 L5
-VQT95Ufm_c79kFJ@eX939k0
+Vfnkld8oQ2Sl6KQ]Qa^m=e0
 R8
-32
-Z102 !s108 1550071285.128404
-Z103 !s90 -reportprogress|300|-work|work|-O0|/nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/simu/unite_gestion_tb.vhd|
-Z104 !s107 /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/simu/unite_gestion_tb.vhd|
-R28
+31
+Z115 !s108 1550249093.763317
+Z116 !s90 -reportprogress|300|-93|unite_gestion_tb.vhd|
+Z117 !s107 unite_gestion_tb.vhd|
+R12
 R13
 !s100 bgi<1KTUG?UkiK?RXCbGm3
 !i10b 1
 Atb
-R98
+R77
 R2
 R3
 R4
-DEx4 work 16 unite_gestion_tb 0 22 QT95Ufm_c79kFJ@eX939k0
+DEx4 work 16 unite_gestion_tb 0 22 fnkld8oQ2Sl6KQ]Qa^m=e0
 l13
 L8
-V<mg<7P>IR4fdfl]omazDC1
+VQEFFZfF]BUD4eZ>Ai`[Z03
 R8
-32
-R102
-R103
-R104
-R28
+31
+R115
+R116
+R117
+R12
 R13
-!s100 2mA>1Z[LUSDn7i5bfo4iZ2
+!s100 inNdB`7ZcQiel6YAj7o[;3
 !i10b 1
 Eunite_trait
-Z105 w1550063395
+Z118 w1550151441
 R2
 R3
 R4
 R5
-Z106 8../src/unite_trait.vhd
-Z107 F../src/unite_trait.vhd
+Z119 8../src/unite_trait.vhd
+Z120 F../src/unite_trait.vhd
 l0
 L5
-V5c6kA>b=am3HjPd8ZW[7^1
+VX:F]fU?0b1d7TU3E:[]h[1
 R8
 31
-Z108 !s108 1550064604.381217
-Z109 !s90 -reportprogress|300|-93|../src/unite_trait.vhd|
-Z110 !s107 ../src/unite_trait.vhd|
+Z121 !s108 1550156273.243607
+R34
+R35
 R12
 R13
-!s100 o;Q1nECgS8E[Be<ODS;AM0
+!s100 5]^kTFN`7Sg9MFQm22Y_32
 !i10b 1
 Artl
 R14
 R21
+R61
 R2
 R3
 R4
-Z111 DEx4 work 11 unite_trait 0 22 5c6kA>b=am3HjPd8ZW[7^1
-l21
-L17
-V86KLOP^3dgNPe`_IiIh4i1
+DEx4 work 11 unite_trait 0 22 X:F]fU?0b1d7TU3E:[]h[1
+l23
+L18
+V]O[Tn9`llVoVRm:9oZ83D1
 R8
 31
-R108
-R109
-R110
+R121
+R34
+R35
 R12
 R13
-!s100 A:?j=91gX[7<:bnWoi@V_2
+!s100 NQHYXIEb576e^OALo3b<Q3
 !i10b 1
 Eunite_trait_tb
-Z112 w1549552007
+Z122 w1549552007
 R2
 R3
 R4
 R5
-Z113 8unite_trait_tb.vhd
-Z114 Funite_trait_tb.vhd
+Z123 8unite_trait_tb.vhd
+Z124 Funite_trait_tb.vhd
 l0
 L5
 VA23PaVVz0D>kfS<1EdcfA2
 R8
 31
-Z115 !s108 1550064604.456239
-Z116 !s90 -reportprogress|300|-93|unite_trait_tb.vhd|
-Z117 !s107 unite_trait_tb.vhd|
+Z125 !s108 1550064604.456239
+Z126 !s90 -reportprogress|300|-93|unite_trait_tb.vhd|
+Z127 !s107 unite_trait_tb.vhd|
 R12
 R13
 !s100 N[[852FZR2]9cXG@aSWf02
 !i10b 1
 Atb
-R111
+DEx4 work 11 unite_trait 0 22 5c6kA>b=am3HjPd8ZW[7^1
 R2
 R3
 R4
@@ -625,9 +705,9 @@ L9
 V01f6Te5]MZMAgAO^9=6jY2
 R8
 31
-R115
-R116
-R117
+R125
+R126
+R127
 R12
 R13
 !s100 lW[EaGVgT>2Gd;iQ4`1^B1

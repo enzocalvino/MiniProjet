@@ -59,7 +59,7 @@ begin
     
   end process;
   
-  decodage:process(Instruction)
+  decodage:process(Instruction, instr_courante)
     begin
       
       if instr_courante = ADDi then
@@ -97,10 +97,15 @@ begin
         
       elsif instr_courante = BLT then
         
-        nPCsel <= '1'; -- 1 ou 0 ??
+        if PSR(31) = '1' then
+          nPCsel <= '1'; 
+        else
+          nPCsel <= '0';
+        end if;
+        
         RegWr <= '0';
         ALUSrc <= '0';
-        ALUCtr <= "00";
+        ALUCtr <= "01";
         PSREn <= '0';
         MemWr <= '0';
         WrSrc <= '0';
@@ -150,7 +155,7 @@ begin
         PSREn <= '0';
         MemWr <= '1';
         WrSrc <= '1';
-        RegSel <= '0';
+        RegSel <= '1';
         
       end if;
       

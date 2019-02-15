@@ -12,8 +12,10 @@ vcom -93 top_trait_unit_tb.vhd
 vsim -novopt top_trait_unit_tb
 
 view signals
-add wave -radix decimal *
-add wave -position insertpoint  \
+add wave -radix hexadecimal *
+add wave -radix hexadecimal -position insertpoint  \
 sim:/top_trait_unit_tb/C0/Banc_comp/Banc
+add wave -radix hexadecimal -position insertpoint  \
+sim:/top_trait_unit_tb/C0/Data_Memory_comp/Memoire
 
 run 100 ns

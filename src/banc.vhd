@@ -42,9 +42,13 @@ architecture RTL of banc is
       begin
         
         if RST = '1' then
+          
           for i in 15 downto 0 loop
             Banc(i) <= (others => '0');
           end loop;
+          
+          Banc(15) <= X"00000030";
+          
       elsif rising_edge(CLK) then
           if WE = '1' then
             Banc(TO_INTEGER(unsigned(RW))) <= W;

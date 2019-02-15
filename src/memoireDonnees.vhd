@@ -25,6 +25,28 @@ architecture RTL of memoireDonnees is
       
       result(63)(31 downto 2) := (others => '0');
       result(63)(1 downto 0) := "11";
+      result(32)(31 downto 2) := (others => '0');
+      result(32)(1 downto 0) := "10"; -- Initialisation de la case 32 => 2
+      result(33)(31 downto 2) := (others => '0');
+      result(33)(1 downto 0) := "10"; -- Initialisation de la case 33 => 2
+      result(34)(31 downto 2) := (others => '0');
+      result(34)(1 downto 0) := "10"; -- Initialisation de la case 34 => 2
+      result(35)(31 downto 2) := (others => '0');
+      result(35)(1 downto 0) := "10"; -- Initialisation de la case 35 => 2
+      result(36)(31 downto 2) := (others => '0');
+      result(36)(1 downto 0) := "10"; -- Initialisation de la case 36 => 2
+      result(37)(31 downto 2) := (others => '0');
+      result(37)(1 downto 0) := "10"; -- Initialisation de la case 37 => 2
+      result(38)(31 downto 2) := (others => '0');
+      result(38)(1 downto 0) := "10"; -- Initialisation de la case 38 => 2
+      result(39)(31 downto 2) := (others => '0');
+      result(39)(1 downto 0) := "10"; -- Initialisation de la case 39 => 2
+      result(40)(31 downto 2) := (others => '0');
+      result(40)(1 downto 0) := "10"; -- Initialisation de la case 40 => 2
+      result(41)(31 downto 2) := (others => '0');
+      result(41)(1 downto 0) := "10"; -- Initialisation de la case 41 => 2
+      result(42)(31 downto 2) := (others => '0');
+      result(42)(1 downto 0) := "10"; -- Initialisation de la case 41 => 2
       
       return result;
       

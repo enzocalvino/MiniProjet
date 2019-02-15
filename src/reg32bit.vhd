@@ -16,7 +16,7 @@ architecture rtl of reg32bit is
   
   begin
     
-    DataOut <= Data;
+    --DataOut <= Data;
     
     process(CLK, RST)
       
@@ -29,9 +29,9 @@ architecture rtl of reg32bit is
         elsif rising_edge(CLK) then
           
           if WE = '1' then
-            Data <= DataIn;
+            DataOut <= DataIn;
           else
-            Data <= Data;
+            DataOut <= Data;
           end if;
         end if;
         end process;
