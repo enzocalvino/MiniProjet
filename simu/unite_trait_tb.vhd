@@ -107,7 +107,7 @@ begin
         
         wait;
   end process testbench;
-C0 : entity work.unite_trait port map(CLK => CLK, RST => RST, WE => WE, OP => OP, RA => RA, RB => RB, RW => RW, N => N, S => S_i);
+C0 : entity work.unite_trait port map(CLK => CLK, RST => RST, WE => WE, OP => OP, RN => RA, RM => RB, RD => RW, N => N, S => S_i);
 end tb;  
         
                                         
