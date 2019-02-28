@@ -19,28 +19,30 @@ begin
           CLK <= '1';
           wait for 5 ns;
         end process clock;
-        
+
         testbench: process
         begin
         RST <= '1';
         offset <= (others => '0');
         nPCsel <= '0';
-        
+
         wait for 5 ns;
-        
+
         RST <= '0';
         nPCsel <= '0';
         offset <= X"FFFFFA";
-        
+
         wait for 50 ns;
-      
+
         nPCsel <= '1';
-        
+
         wait for 10 ns;
-        
+
+        nPCsel <= '0';
+
         wait;
       end process;
-      
+
       C0 : entity work.unite_gestion port map(CLK => CLK, RST => RST,
                                               nPCsel => nPCsel, offset => offset,
                                               instruction => instruction);
