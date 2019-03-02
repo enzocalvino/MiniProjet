@@ -9,11 +9,10 @@ end VIC_tb;
 architecture tb of VIC_tb is
 Signal CLK : std_logic;
 Signal RESET : std_logic;
-Signal IRQ_SERV : in std_logic;
-Signal IRQ0, IRQ1 : in std_logic;
+Signal IRQ_SERV : std_logic;
+Signal IRQ0, IRQ1 : std_logic;
 Signal IRQ : std_logic;
 Signal VICPC : std_logic_vector(31 downto 0);
-Signal OK : std_logic;
 
 begin
 
@@ -30,7 +29,7 @@ begin
       begin
       RESET <= '1';
       IRQ_SERV <= '0';
-      
+
       wait for 10 ns;
       RESET <= '0';
       wait for 10 ns;
