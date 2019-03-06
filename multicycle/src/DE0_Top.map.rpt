@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE0_Top
-Thu Feb 21 12:07:57 2019
+Wed Mar  6 12:40:47 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Thu Feb 21 12:07:57 2019                ;
+; Analysis & Synthesis Status        ; Failed - Wed Mar  6 12:40:47 2019                ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; DE0_Top                                          ;
 ; Top-level Entity Name              ; DE0_TOP                                          ;
@@ -163,9 +163,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Thu Feb 21 12:07:56 2019
+    Info: Processing started: Wed Mar  6 12:40:45 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE0_Top -c DE0_Top
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (12021): Found 2 design units, including 1 entities, in source file /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/monocycle/src/extensionSigne.vhd
+    Info (12022): Found design unit 1: extensionSigne-RTL
+    Info (12023): Found entity 1: extensionSigne
 Info (12021): Found 2 design units, including 1 entities, in source file memoireAll.vhd
     Info (12022): Found design unit 1: memoireall-SYN
     Info (12023): Found entity 1: memoireAll
@@ -203,70 +206,109 @@ Info (12021): Found 2 design units, including 1 entities, in source file reg32.v
 Info (12021): Found 2 design units, including 1 entities, in source file VIC.vhd
     Info (12022): Found design unit 1: VIC-RTL
     Info (12023): Found entity 1: VIC
+Info (12021): Found 2 design units, including 1 entities, in source file MAE.vhd
+    Info (12022): Found design unit 1: mae-RTL
+    Info (12023): Found entity 1: mae
 Info (12127): Elaborating entity "DE0_TOP" for the top level hierarchy
 Info (12128): Elaborating entity "arm" for hierarchy "arm:arm_1"
-Info (12128): Elaborating entity "DataPath" for hierarchy "arm:arm_1|DataPath:DataPath1"
-Info (12128): Elaborating entity "VIC" for hierarchy "arm:arm_1|DataPath:DataPath1|VIC:VIC0"
-Info (12128): Elaborating entity "ALU" for hierarchy "arm:arm_1|DataPath:DataPath1|ALU:ALU0"
-Warning (10631): VHDL Process Statement warning at ALU.vhd(20): inferring latch(es) for signal or variable "Y", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "Y[0]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[1]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[2]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[3]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[4]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[5]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[6]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[7]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[8]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[9]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[10]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[11]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[12]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[13]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[14]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[15]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[16]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[17]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[18]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[19]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[20]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[21]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[22]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[23]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[24]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[25]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[26]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[27]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[28]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[29]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[30]" at ALU.vhd(20)
-Info (10041): Inferred latch for "Y[31]" at ALU.vhd(20)
-Error (12006): Node instance "MAE1" instantiates undefined entity "MAE" File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/arm.vhd Line: 144
-Error (12006): Node instance "MuxPC" instantiates undefined entity "mux4v1" File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/DataPath.vhd Line: 242
-Error (12006): Node instance "RegPC" instantiates undefined entity "RegLd" File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/DataPath.vhd Line: 251
-Error (12006): Node instance "LR0" instantiates undefined entity "RegLd" File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/DataPath.vhd Line: 259
-Error (12006): Node instance "MuxMem" instantiates undefined entity "mux2v1" File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/DataPath.vhd Line: 266
-Error (12006): Node instance "Memoire" instantiates undefined entity "intern_memory" File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/DataPath.vhd Line: 273
-Error (12006): Node instance "RegistreInstr" instantiates undefined entity "RegLd" File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/DataPath.vhd Line: 283
-Error (12006): Node instance "RegistreData" instantiates undefined entity "Reg" File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/DataPath.vhd Line: 291
-Error (12006): Node instance "MuxW0" instantiates undefined entity "mux2v1" File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/DataPath.vhd Line: 298
-Error (12006): Node instance "MuxRB0" instantiates undefined entity "mux2v1" File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/DataPath.vhd Line: 308
-Error (12006): Node instance "BancReg" instantiates undefined entity "RegBank" File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/DataPath.vhd Line: 315
-Error (12006): Node instance "RegA0" instantiates undefined entity "Reg" File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/DataPath.vhd Line: 326
-Error (12006): Node instance "RegB0" instantiates undefined entity "Reg" File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/DataPath.vhd Line: 333
-Error (12006): Node instance "Ext8_32" instantiates undefined entity "ext32" File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/DataPath.vhd Line: 340
-Error (12006): Node instance "Ext24_32" instantiates undefined entity "ext32" File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/DataPath.vhd Line: 345
-Error (12006): Node instance "MuxAluA" instantiates undefined entity "mux2v1" File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/DataPath.vhd Line: 350
-Error (12006): Node instance "MuxAluB" instantiates undefined entity "mux4v1" File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/DataPath.vhd Line: 360
-Error (12006): Node instance "RegALU0" instantiates undefined entity "Reg" File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/DataPath.vhd Line: 377
-Error (12006): Node instance "cpsrmux" instantiates undefined entity "mux2v1" File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/DataPath.vhd Line: 386
-Error (12006): Node instance "CPSR0" instantiates undefined entity "RegLd" File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/DataPath.vhd Line: 393
-Error (12006): Node instance "SPSR0" instantiates undefined entity "RegLd" File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/DataPath.vhd Line: 401
-Error (12006): Node instance "RegRes" instantiates undefined entity "RegLd" File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/DataPath.vhd Line: 409
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 22 errors, 2 warnings
-    Error: Peak virtual memory: 584 megabytes
-    Error: Processing ended: Thu Feb 21 12:07:58 2019
-    Error: Elapsed time: 00:00:02
+Info (12128): Elaborating entity "mae" for hierarchy "arm:arm_1|mae:MAE1"
+Warning (10631): VHDL Process Statement warning at MAE.vhd(36): inferring latch(es) for signal or variable "EtatFutur", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at MAE.vhd(36): inferring latch(es) for signal or variable "ISR", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at MAE.vhd(51): inferring latch(es) for signal or variable "inst_mem_courante", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at MAE.vhd(144): signal "N" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at MAE.vhd(148): signal "N" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at MAE.vhd(94): inferring latch(es) for signal or variable "IRQServ", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at MAE.vhd(94): inferring latch(es) for signal or variable "PCSel", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at MAE.vhd(94): inferring latch(es) for signal or variable "PCWrEn", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at MAE.vhd(94): inferring latch(es) for signal or variable "LRWrEn", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at MAE.vhd(94): inferring latch(es) for signal or variable "AdrSel", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at MAE.vhd(94): inferring latch(es) for signal or variable "MemRdEn", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at MAE.vhd(94): inferring latch(es) for signal or variable "MemWrEn", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at MAE.vhd(94): inferring latch(es) for signal or variable "IRWrEn", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at MAE.vhd(94): inferring latch(es) for signal or variable "WSel", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at MAE.vhd(94): inferring latch(es) for signal or variable "RegWrEn", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at MAE.vhd(94): inferring latch(es) for signal or variable "AluSelA", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at MAE.vhd(94): inferring latch(es) for signal or variable "AluSelB", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at MAE.vhd(94): inferring latch(es) for signal or variable "AluOP", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at MAE.vhd(94): inferring latch(es) for signal or variable "CPSRSel", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at MAE.vhd(94): inferring latch(es) for signal or variable "CPSRWrEn", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at MAE.vhd(94): inferring latch(es) for signal or variable "SPSRWrEn", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at MAE.vhd(94): inferring latch(es) for signal or variable "ResWrEn", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at MAE.vhd(94): inferring latch(es) for signal or variable "EtatFutur", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at MAE.vhd(94): inferring latch(es) for signal or variable "ISR", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "ISR" at MAE.vhd(94)
+Info (10041): Inferred latch for "EtatFutur.Etat18" at MAE.vhd(94)
+Info (10041): Inferred latch for "EtatFutur.Etat17" at MAE.vhd(94)
+Info (10041): Inferred latch for "EtatFutur.Etat16" at MAE.vhd(94)
+Info (10041): Inferred latch for "EtatFutur.Etat15" at MAE.vhd(94)
+Info (10041): Inferred latch for "EtatFutur.Etat14" at MAE.vhd(94)
+Info (10041): Inferred latch for "EtatFutur.Etat13" at MAE.vhd(94)
+Info (10041): Inferred latch for "EtatFutur.Etat12" at MAE.vhd(94)
+Info (10041): Inferred latch for "EtatFutur.Etat11" at MAE.vhd(94)
+Info (10041): Inferred latch for "EtatFutur.Etat10" at MAE.vhd(94)
+Info (10041): Inferred latch for "EtatFutur.Etat9" at MAE.vhd(94)
+Info (10041): Inferred latch for "EtatFutur.Etat8" at MAE.vhd(94)
+Info (10041): Inferred latch for "EtatFutur.Etat7" at MAE.vhd(94)
+Info (10041): Inferred latch for "EtatFutur.Etat6" at MAE.vhd(94)
+Info (10041): Inferred latch for "EtatFutur.Etat5" at MAE.vhd(94)
+Info (10041): Inferred latch for "EtatFutur.Etat4" at MAE.vhd(94)
+Info (10041): Inferred latch for "EtatFutur.Etat3" at MAE.vhd(94)
+Info (10041): Inferred latch for "EtatFutur.Etat2" at MAE.vhd(94)
+Info (10041): Inferred latch for "EtatFutur.Etat1" at MAE.vhd(94)
+Info (10041): Inferred latch for "ResWrEn" at MAE.vhd(94)
+Info (10041): Inferred latch for "SPSRWrEn" at MAE.vhd(94)
+Info (10041): Inferred latch for "CPSRWrEn" at MAE.vhd(94)
+Info (10041): Inferred latch for "CPSRSel" at MAE.vhd(94)
+Info (10041): Inferred latch for "AluOP[0]" at MAE.vhd(94)
+Info (10041): Inferred latch for "AluOP[1]" at MAE.vhd(94)
+Info (10041): Inferred latch for "AluSelB[0]" at MAE.vhd(94)
+Info (10041): Inferred latch for "AluSelB[1]" at MAE.vhd(94)
+Info (10041): Inferred latch for "AluSelA" at MAE.vhd(94)
+Info (10041): Inferred latch for "RegWrEn" at MAE.vhd(94)
+Info (10041): Inferred latch for "WSel" at MAE.vhd(94)
+Info (10041): Inferred latch for "IRWrEn" at MAE.vhd(94)
+Info (10041): Inferred latch for "MemWrEn" at MAE.vhd(94)
+Info (10041): Inferred latch for "MemRdEn" at MAE.vhd(94)
+Info (10041): Inferred latch for "AdrSel" at MAE.vhd(94)
+Info (10041): Inferred latch for "LRWrEn" at MAE.vhd(94)
+Info (10041): Inferred latch for "PCWrEn" at MAE.vhd(94)
+Info (10041): Inferred latch for "PCSel[0]" at MAE.vhd(94)
+Info (10041): Inferred latch for "PCSel[1]" at MAE.vhd(94)
+Info (10041): Inferred latch for "IRQServ" at MAE.vhd(94)
+Info (10041): Inferred latch for "inst_mem_courante.BX" at MAE.vhd(51)
+Info (10041): Inferred latch for "inst_mem_courante.BLT" at MAE.vhd(51)
+Info (10041): Inferred latch for "inst_mem_courante.BAL" at MAE.vhd(51)
+Info (10041): Inferred latch for "inst_mem_courante.STR" at MAE.vhd(51)
+Info (10041): Inferred latch for "inst_mem_courante.LDR" at MAE.vhd(51)
+Info (10041): Inferred latch for "inst_mem_courante.CMP" at MAE.vhd(51)
+Info (10041): Inferred latch for "inst_mem_courante.ADDr" at MAE.vhd(51)
+Info (10041): Inferred latch for "inst_mem_courante.ADDi" at MAE.vhd(51)
+Info (10041): Inferred latch for "inst_mem_courante.MOV" at MAE.vhd(51)
+Info (10041): Inferred latch for "ISR" at MAE.vhd(36)
+Error (10028): Can't resolve multiple constant drivers for net "EtatFutur.Etat1" at MAE.vhd(94) File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/MAE.vhd Line: 94
+Error (10029): Constant driver at MAE.vhd(36) File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/MAE.vhd Line: 36
+Error (10028): Can't resolve multiple constant drivers for net "EtatFutur.Etat2" at MAE.vhd(94) File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/MAE.vhd Line: 94
+Error (10028): Can't resolve multiple constant drivers for net "EtatFutur.Etat3" at MAE.vhd(94) File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/MAE.vhd Line: 94
+Error (10028): Can't resolve multiple constant drivers for net "EtatFutur.Etat4" at MAE.vhd(94) File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/MAE.vhd Line: 94
+Error (10028): Can't resolve multiple constant drivers for net "EtatFutur.Etat5" at MAE.vhd(94) File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/MAE.vhd Line: 94
+Error (10028): Can't resolve multiple constant drivers for net "EtatFutur.Etat6" at MAE.vhd(94) File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/MAE.vhd Line: 94
+Error (10028): Can't resolve multiple constant drivers for net "EtatFutur.Etat7" at MAE.vhd(94) File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/MAE.vhd Line: 94
+Error (10028): Can't resolve multiple constant drivers for net "EtatFutur.Etat8" at MAE.vhd(94) File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/MAE.vhd Line: 94
+Error (10028): Can't resolve multiple constant drivers for net "EtatFutur.Etat9" at MAE.vhd(94) File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/MAE.vhd Line: 94
+Error (10028): Can't resolve multiple constant drivers for net "EtatFutur.Etat10" at MAE.vhd(94) File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/MAE.vhd Line: 94
+Error (10028): Can't resolve multiple constant drivers for net "EtatFutur.Etat11" at MAE.vhd(94) File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/MAE.vhd Line: 94
+Error (10028): Can't resolve multiple constant drivers for net "EtatFutur.Etat12" at MAE.vhd(94) File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/MAE.vhd Line: 94
+Error (10028): Can't resolve multiple constant drivers for net "EtatFutur.Etat13" at MAE.vhd(94) File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/MAE.vhd Line: 94
+Error (10028): Can't resolve multiple constant drivers for net "EtatFutur.Etat14" at MAE.vhd(94) File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/MAE.vhd Line: 94
+Error (10028): Can't resolve multiple constant drivers for net "EtatFutur.Etat15" at MAE.vhd(94) File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/MAE.vhd Line: 94
+Error (10028): Can't resolve multiple constant drivers for net "EtatFutur.Etat16" at MAE.vhd(94) File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/MAE.vhd Line: 94
+Error (10028): Can't resolve multiple constant drivers for net "EtatFutur.Etat17" at MAE.vhd(94) File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/MAE.vhd Line: 94
+Error (10028): Can't resolve multiple constant drivers for net "EtatFutur.Etat18" at MAE.vhd(94) File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/MAE.vhd Line: 94
+Error (12152): Can't elaborate user hierarchy "arm:arm_1|mae:MAE1" File: /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/multicycle/src/arm.vhd Line: 144
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 20 errors, 25 warnings
+    Error: Peak virtual memory: 596 megabytes
+    Error: Processing ended: Wed Mar  6 12:40:48 2019
+    Error: Elapsed time: 00:00:03
     Error: Total CPU time (on all processors): 00:00:01
 
 

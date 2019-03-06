@@ -95,13 +95,13 @@ architecture archi of DataPath is
 
 	----------------------------------------------------
 	-- Registre
-	component Reg is
+	component reg32 is
 	port  (
 		datain	: in 	std_logic_vector(31 downto 0);
 		rst,clk	: in 	std_logic;
 		dataout	: out std_logic_vector(31 downto 0)
 	);
-	end component Reg;
+	end component reg32;
 	----------------------------------------------------
 
 	----------------------------------------------------
@@ -117,7 +117,7 @@ architecture archi of DataPath is
 
 	----------------------------------------------------
 	-- Banc de Registres
-	component RegBank is
+	component banc is
 	port	(
 		clk	: IN 	STD_LOGIC ;
 		w		: IN 	STD_LOGIC_VECTOR (31 DOWNTO 0);
@@ -128,7 +128,7 @@ architecture archi of DataPath is
 		a		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
 		b		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
 	);  
-	end component RegBank;
+	end component banc;
 	----------------------------------------------------
 
 	----------------------------------------------------
@@ -145,19 +145,19 @@ architecture archi of DataPath is
 
 	----------------------------------------------------
 	-- Mux 4 -> 1
-	component mux4v1 is
+	component mux41 is
 	generic (n: natural:=32);
 	port	(
 		a,b,c,d	: in 	std_logic_vector (n-1 downto 0);
 		com		: in 	std_logic_vector(1 downto 0);
 		s			: out std_logic_vector (n-1 downto 0)
 	);
-	end component mux4v1;
+	end component mux41;
 	----------------------------------------------------
 
 	----------------------------------------------------
 	-- Extenseur 32 Bits
-	component ext32 is
+	component extensionSigne is
 	generic(n: natural:=8);
 	port(
 		e	: in 	std_logic_vector(n-1 downto 0);

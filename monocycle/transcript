@@ -1,0 +1,67 @@
+# Load canceled
+# Load canceled
+vcom -reportprogress 300 -work work /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/monocycle/src/uniteGestion.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# ** Error: (vcom-19) Failed to access library 'work' at "work".
+# No such file or directory. (errno = ENOENT)
+cd /nfs/home/sasl/eleves/ei-se/3670556/Informatique/Projet_VHDL/MiniProjet/monocycle/simu
+vsim work.unite_gestion_tb
+# vsim work.unite_gestion_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.unite_gestion_tb(tb)
+# Loading ieee.std_logic_arith(body)
+# Loading work.unite_gestion(rtl)
+# Loading work.extensionpc(rtl)
+# Loading work.pc(rtl)
+# Loading work.instruction_memory(rtl)
+quit -sim
+ls
+# ALU_TB.vhd
+# processeur.do
+# processeur_tb.vhd
+# top_trait_unit.do
+# top_trait_unite.do
+# top_trait_unit_tb.vhd
+# unite_gestion.do
+# unite_gestion_tb.vhd
+# unite_trait.do
+# unite_trait_tb.vhd
+# work
+do unite_gestion.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity unite_gestion_tb
+# -- Compiling architecture tb of unite_gestion_tb
+# -- Loading entity unite_gestion
+# vsim -novopt unite_gestion_tb(TB) 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.unite_gestion_tb(tb)
+# Loading ieee.std_logic_arith(body)
+# Loading work.unite_gestion(rtl)
+# Loading work.extensionpc(rtl)
+# Loading work.pc(rtl)
+# Loading work.instruction_memory(rtl)
+# .main_pane.objects.interior.cs.body.tree
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /unite_gestion_tb/C0/C2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /unite_gestion_tb/C0/C0
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -6 is not in bounds of NATURAL.
+#    Time: 65 ns  Iteration: 3  Instance: /unite_gestion_tb/C0/C2
+# ** Fatal: (vsim-3734) Index value -5 is out of range 0 to 63.
+#    Time: 65 ns  Iteration: 3  Process: /unite_gestion_tb/C0/C2/line__36 File: ../src/memoireInstructions.vhd
+# Fatal error in Architecture RTL at ../src/memoireInstructions.vhd line 36
+# 
+# HDL call sequence:
+# Stopped at ../src/memoireInstructions.vhd 36 Architecture RTL
+# 
