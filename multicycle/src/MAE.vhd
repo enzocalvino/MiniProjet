@@ -7,7 +7,7 @@ port(
 		IRQ 							: in std_logic;
 		INST_MEM, INST_REG		: in std_logic_vector(31 downto 0);
 		PCSel, AluOP, AluSelB	: out std_logic_vector(1 downto 0);
-		IRQServ, PCWrEn			: out std_logic;
+		irq_serv, PCWrEn			: out std_logic;
 		LRWrEn, AdrSel, MemRdEn : out std_logic;
 		MemWrEn, IRWrEn, WSel   : out std_logic;
 		RegWrEn, AluSelA			: out std_logic;
@@ -95,7 +95,7 @@ architecture RTL of mae is
 
 				if EtatPresent = Etat1 then
 
-						IRQServ <= '0';
+						irq_serv <= '0';
 						PCSel <= "00";
 						PCWrEn <= '0';
 						LRWrEn <= '0';
@@ -117,7 +117,7 @@ architecture RTL of mae is
 
 				elsif EtatPresent = Etat2 then
 
-						IRQServ <= '0';
+						irq_serv <= '0';
 						PCSel <= "00";
 						PCWrEn <= '0';
 						LRWrEn <= '0';
@@ -160,7 +160,7 @@ architecture RTL of mae is
 
 				elsif  EtatPresent = Etat3 then
 
-						IRQServ <= '0';
+						irq_serv <= '0';
 						PCSel <= "00";
 						PCWrEn <= '1';
 						LRWrEn <= '0';
@@ -182,7 +182,7 @@ architecture RTL of mae is
 
 				elsif EtatPresent = Etat4 then
 
-						IRQServ <= '0';
+						irq_serv <= '0';
 						PCSel <= "00";
 						PCWrEn <= '1';
 						LRWrEn <= '0';
@@ -204,7 +204,7 @@ architecture RTL of mae is
 
 				 elsif EtatPresent = Etat5 then
 
-						IRQServ <= '0';
+						irq_serv <= '0';
 						PCSel <= "00";
 						PCWrEn <= '1';
 						LRWrEn <= '0';
@@ -246,7 +246,7 @@ architecture RTL of mae is
 
 				 elsif EtatPresent = Etat7 then
 
-						IRQServ <= '0';
+						irq_serv <= '0';
 						PCSel <= "00";
 						PCWrEn <= '0';
 						LRWrEn <= '0';
@@ -280,7 +280,7 @@ architecture RTL of mae is
 
 					elsif EtatPresent = Etat8 then
 
-						IRQServ <= '0';
+						irq_serv <= '0';
 						PCSel <= "00";
 						PCWrEn <= '0';
 						LRWrEn <= '0';
@@ -302,7 +302,7 @@ architecture RTL of mae is
 
 					elsif EtatPresent = Etat9 then
 
-						IRQServ <= '0';
+						irq_serv <= '0';
 						PCSel <= "00";
 						PCWrEn <= '0';
 						LRWrEn <= '0';
@@ -324,7 +324,7 @@ architecture RTL of mae is
 
 					elsif EtatPresent = Etat10 then
 
-						IRQServ <= '0';
+						irq_serv <= '0';
 						PCSel <= "00";
 						PCWrEn <= '0';
 						LRWrEn <= '0';
@@ -346,7 +346,7 @@ architecture RTL of mae is
 
 					elsif EtatPresent = Etat11 then
 
-						IRQServ <= '0';
+						irq_serv <= '0';
 						PCSel <= "01";
 						PCWrEn <= '0';
 						LRWrEn <= '0';
@@ -368,7 +368,7 @@ architecture RTL of mae is
 
 					elsif EtatPresent = Etat12 then
 
-						IRQServ <= '0';
+						irq_serv <= '0';
 						PCSel <= "01";
 						PCWrEn <= '0';
 						LRWrEn <= '0';
@@ -390,7 +390,7 @@ architecture RTL of mae is
 
 					elsif EtatPresent = Etat13 then
 
-						IRQServ <= '0';
+						irq_serv <= '0';
 						PCSel <= "00";
 						PCWrEn <= '0';
 						LRWrEn <= '0';
@@ -412,7 +412,7 @@ architecture RTL of mae is
 
 					elsif EtatPresent = Etat14 then
 
-						IRQServ <= '0';
+						irq_serv <= '0';
 						PCSel <= "00";
 						PCWrEn <= '0';
 						LRWrEn <= '0';
@@ -434,7 +434,7 @@ architecture RTL of mae is
 
 					elsif EtatPresent = Etat15 then
 
-						IRQServ <= '0';
+						irq_serv <= '0';
 						PCSel <= "00";
 						PCWrEn <= '0';
 						LRWrEn <= '0';
@@ -456,7 +456,7 @@ architecture RTL of mae is
 
 					elsif EtatPresent = Etat16 then
 
-						IRQServ <= '1';
+						irq_serv <= '1';
 						PCSel <= "10";
 						PCWrEn <= '1';
 						LRWrEn <= '0';
@@ -480,7 +480,7 @@ architecture RTL of mae is
 
 					elsif EtatPresent = Etat17 then
 
-						IRQServ <= '0';
+						irq_serv <= '0';
 						PCSel <= "00";
 						PCWrEn <= '0';
 						LRWrEn <= '1';
@@ -502,7 +502,7 @@ architecture RTL of mae is
 
 					elsif EtatPresent = Etat18 then
 
-						IRQServ <= '0';
+						irq_serv <= '0';
 						PCSel <= "11";
 						PCWrEn <= '1';
 						LRWrEn <= '0';
