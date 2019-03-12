@@ -61,11 +61,11 @@ begin
 				end if;
 
 				if(IRQ0_memo = '1') then
-					VICPC <= x"00000009";
+					VICPC <= x"9";
 				elsif(IRQ0_memo = '0' and IRQ1_memo = '1') then
-					VICPC <= x"00000015";
+					VICPC <= x"15";
 				else
-					VICPC <= x"00000000";
+					VICPC <= x"0";
 				end if;
 			end process;
 

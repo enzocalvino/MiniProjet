@@ -38,7 +38,6 @@ architecture RTL of mae is
 			IF RST = '1' then
 
 				EtatPresent <= Etat1;
-				ISR <= '0';
 
 			elsif rising_edge(CLK) then
 
