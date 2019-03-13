@@ -1,11 +1,12 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity VIC is
 	port(
 		CLK : in std_logic;
 		RESET : in std_logic;
-		IRQ_SERV : in std_logic;
+		serv_irq : in std_logic;
 		IRQ0, IRQ1 : in std_logic;
 		IRQ : out std_logic;
 		VICPC : out std_logic_vector(31 downto 0)
@@ -23,8 +24,6 @@ begin
 		begin
 
 			if RESET = '1' then
-				VICPC <= (others => '0');
-
 				IRQ0_n <= '0';
 				IRQ0_n_1 <= '0';
 
@@ -42,8 +41,13 @@ begin
 			end if;
 		end process echantillon;
 
-		transition: process(IRQ0_n, IRQ0_n_1, IRQ1_n, IRQ1_n_1)
+		transition: process(IRQ0_n, IRQ0_n_1, IRQ1_n, IRQ1_n_1, serv_irq)
 			begin
+				if(serv_irq = '1') then
+					IRQ0_memo <= '0';
+					IRQ1_memo <= '0';
+				end if;
+				
 				if(IRQ0_n = '1' and IRQ0_n_1 = '0') then
 					IRQ0_memo <= '1';
 				end if;
@@ -53,19 +57,16 @@ begin
 				end if;
 			end process transition;
 
-		requetes: process(IRQ0_memo, IRQ1_memo)
+		requetes: process(IRQ0_memo, IRQ1_memo, reset)
 			begin
-				if(IRQ_SERV = '1') then
-					IRQ0_memo <= '0';
-					IRQ1_memo <= '0';
-				end if;
-
-				if(IRQ0_memo = '1') then
-					VICPC <= x"9";
-				elsif(IRQ0_memo = '0' and IRQ1_memo = '1') then
-					VICPC <= x"15";
+				if(RESET = '1') then
+					VICPC <= (others => '0');
+				elsif(IRQ0_memo = '1') then
+					VICPC <= std_logic_vector(to_unsigned(9, 32));
+				elsif(IRQ1_memo = '1') then
+					VICPC <= std_logic_vector(to_unsigned(21, 32));
 				else
-					VICPC <= x"0";
+					VICPC <= std_logic_vector(to_unsigned(0, 32));
 				end if;
 			end process;
 

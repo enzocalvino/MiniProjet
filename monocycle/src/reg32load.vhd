@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.Std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity reg32bit is 
+entity reg32Load is 
     port(
         CLK, RST, WE : in std_logic;
         DataIn : in std_logic_vector(31 downto 0);
@@ -11,7 +11,7 @@ entity reg32bit is
     end entity;
         
         
-architecture rtl of reg32bit is
+architecture rtl of reg32Load is
   
   begin
    
@@ -30,7 +30,7 @@ architecture rtl of reg32bit is
             DataOut <= DataIn;
           end if;
         end if;
-        end process;
+     end process;
         
-      end rtl;
+end rtl;
       
