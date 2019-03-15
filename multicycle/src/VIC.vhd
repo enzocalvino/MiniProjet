@@ -41,9 +41,12 @@ begin
 			end if;
 		end process echantillon;
 
-		transition: process(IRQ0_n, IRQ0_n_1, IRQ1_n, IRQ1_n_1, serv_irq)
+		transition: process(IRQ0_n, IRQ0_n_1, IRQ1_n, IRQ1_n_1, serv_irq, RESET)
 			begin
-				if(serv_irq = '1') then
+			  if(RESET = '1') then
+			    IRQ0_memo <= '0';
+					IRQ1_memo <= '0';
+				elsif(serv_irq = '1') then
 					IRQ0_memo <= '0';
 					IRQ1_memo <= '0';
 				end if;

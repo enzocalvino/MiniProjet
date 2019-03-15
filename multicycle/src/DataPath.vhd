@@ -120,6 +120,7 @@ architecture archi of DataPath is
 	component banc is
 	port	(
 		clk	: IN 	STD_LOGIC ;
+		rst : IN 	STD_LOGIC ;
 		w		: IN 	STD_LOGIC_VECTOR (31 DOWNTO 0);
 		ra		: IN 	STD_LOGIC_VECTOR (3 DOWNTO 0);
 		rb		: IN 	STD_LOGIC_VECTOR (3 DOWNTO 0);
@@ -314,6 +315,7 @@ MuxRB0 : mux21 generic map(4) port map(
 -- Banc de Registres
 BancReg: banc port map(
 			clk			=>	clk,
+			rst   => rst,
 			w				=>	MuxBusW,
 			ra				=>	IR(19 downto 16),
 			rb				=>	MuxBusRB,
@@ -380,7 +382,7 @@ RegALU0: reg32 port map(
 			clk			=>	clk,
 			dataout		=>	RegALU);
 
-CpsrFlag<=FlagN & Cpsr(30 downto 0);
+CpsrFlag<= FlagN & Cpsr(30 downto 0);
 
 -- Mux CPSR
 cpsrmux : mux21 port map(

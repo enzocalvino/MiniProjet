@@ -41,9 +41,18 @@ port map(clkt,irq0t,irq1t,rstt,res);
      
      
    end process generate_clock;
-
-irq0t<='0';
-irq1t<='0';  
+   
+   testbench: process
+   begin
+     irq0t<='0';
+     irq1t<='0';
+     
+     wait for 500 ns;
+     
+     irq0t <='1';
+     
+     wait;
+   end process testbench;
 
 end architecture arc_test_arm;
 

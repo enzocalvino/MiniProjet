@@ -24,7 +24,7 @@ begin
       elsif OP = "01" then
         Y <= B after 1 ns;
       elsif OP = "10" then
-        Y <= std_logic_vector(signed(A) - signed(B));
+        Y <= std_logic_vector(signed(B) - signed(A));
       elsif OP = "11" then
         Y <= A after 1 ns;
       end if;

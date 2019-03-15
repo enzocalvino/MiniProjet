@@ -38,15 +38,21 @@ architecture RTL of mae is
 			IF RST = '1' then
 
 				EtatPresent <= Etat1;
+				ISR <= '0';
 
 			elsif rising_edge(CLK) then
 
 				EtatPresent <= EtatFutur;
+				if(EtatPresent = Etat16) then
+				  ISR <= '0';
+				elsif(EtatPresent = Etat18) then
+				  ISR <= '1';
+				end if;
 
 			end if;
 		end process horloge;
 
-		instructions:process(INST_MEM)
+		instructionsMEM:process(INST_MEM)
 		 begin
 
 		 if INST_MEM(31 downto 20) = x"E3A" then
@@ -87,8 +93,52 @@ architecture RTL of mae is
 
 		 end if;
 
-	 end process instructions;
+	 end process instructionsMEM;
+	 
+	 instructionsREG:process(INST_REG)
+		 begin
 
+		 if INST_REG(31 downto 20) = x"E3A" then
+
+			inst_reg_courante <= MOV;
+
+		 elsif INST_REG(31 downto 20) = x"E61" then
+
+			inst_reg_courante <= LDR;
+
+		 elsif INST_REG(31 downto 20) = x"E08" then
+
+			inst_reg_courante <= ADDr;
+
+		 elsif INST_REG(31 downto 20) = x"E28" then
+
+			inst_reg_courante <= ADDi;
+
+		 elsif INST_REG(31 downto 20) = x"E35" then
+
+			inst_reg_courante <= CMP;
+
+		 elsif INST_REG(31 downto 24) = x"BA" then
+
+			inst_reg_courante <= BLT;
+
+		 elsif INST_REG(31 downto 20) = x"E60" then
+
+			inst_reg_courante <= STR;
+
+		 elsif INST_REG(31 downto 24) = x"EA" then
+
+			inst_reg_courante <= BAL;
+
+		 elsif INST_REG(31 downto 24) = x"EB" then
+
+			inst_reg_courante <= BX;
+
+		 end if;
+
+	 end process instructionsREG;
+	 
+	 
 		etats: process(EtatPresent, IRQ, INST_MEM, inst_mem_courante, ISR)
 			begin
 
@@ -166,7 +216,7 @@ architecture RTL of mae is
 						AdrSel <= '0';
 						MemRdEn <= '0';
 						MemWrEn <= '0';
-						IRWrEn <= '1';
+						IRWrEn <= '0';
 						WSel <= '0';
 						RegWrEn <= '0';
 						ALUSelA <= '0';
@@ -188,11 +238,11 @@ architecture RTL of mae is
 						AdrSel <= '0';
 						MemRdEn <= '0';
 						MemWrEn <= '0';
-						IRWrEn <= '1';
+						IRWrEn <= '0';
 						WSel <= '0';
 						RegWrEn <= '0';
 						ALUSelA <= '0';
-						ALUSelB <= "11";
+						ALUSelB <= "10";
 						ALUOP <= "00";
 						CPSRSel <= '0';
 						CPSRWrEn <= '0';
@@ -210,7 +260,7 @@ architecture RTL of mae is
 						AdrSel <= '0';
 						MemRdEn <= '0';
 						MemWrEn <= '0';
-						IRWrEn <= '1';
+						IRWrEn <= '0';
 						WSel <= '0';
 						RegWrEn <= '0';
 						ALUSelA <= '0';
@@ -224,6 +274,24 @@ architecture RTL of mae is
 						EtatFutur <= Etat1;
 
 				 elsif EtatPresent = Etat6 then
+				   
+				    irq_serv <= '0';
+						PCSel <= "00";
+						PCWrEn <= '0';
+						LRWrEn <= '0';
+						AdrSel <= '0';
+						MemRdEn <= '0';
+						MemWrEn <= '0';
+						IRWrEn <= '0';
+						WSel <= '0';
+						RegWrEn <= '0';
+						ALUSelA <= '0';
+						ALUSelB <= "00";
+						ALUOP <= "00";
+						CPSRSel <= '0';
+						CPSRWrEn <= '0';
+						SPSRWrEn <= '0';
+						ResWrEn <= '0';
 
 						if inst_mem_courante = LDR or inst_mem_courante = STR or inst_mem_courante = ADDi then
 
@@ -252,7 +320,7 @@ architecture RTL of mae is
 						AdrSel <= '0';
 						MemRdEn <= '0';
 						MemWrEn <= '0';
-						IRWrEn <= '1';
+						IRWrEn <= '0';
 						WSel <= '0';
 						RegWrEn <= '0';
 						ALUSelA <= '1';
@@ -286,7 +354,7 @@ architecture RTL of mae is
 						AdrSel <= '0';
 						MemRdEn <= '0';
 						MemWrEn <= '0';
-						IRWrEn <= '1';
+						IRWrEn <= '0';
 						WSel <= '0';
 						RegWrEn <= '0';
 						ALUSelA <= '1';
@@ -308,7 +376,7 @@ architecture RTL of mae is
 						AdrSel <= '0';
 						MemRdEn <= '0';
 						MemWrEn <= '0';
-						IRWrEn <= '1';
+						IRWrEn <= '0';
 						WSel <= '0';
 						RegWrEn <= '0';
 						ALUSelA <= '1';
@@ -330,12 +398,12 @@ architecture RTL of mae is
 						AdrSel <= '0';
 						MemRdEn <= '0';
 						MemWrEn <= '0';
-						IRWrEn <= '1';
+						IRWrEn <= '0';
 						WSel <= '0';
 						RegWrEn <= '0';
 						ALUSelA <= '1';
 						ALUSelB <= "01";
-						ALUOP <= "01";
+						ALUOP <= "10";
 						CPSRSel <= '0';
 						CPSRWrEn <= '1';
 						SPSRWrEn <= '0';
@@ -352,7 +420,7 @@ architecture RTL of mae is
 						AdrSel <= '1';
 						MemRdEn <= '1';
 						MemWrEn <= '0';
-						IRWrEn <= '1';
+						IRWrEn <= '0';
 						WSel <= '0';
 						RegWrEn <= '0';
 						ALUSelA <= '1';
@@ -374,7 +442,7 @@ architecture RTL of mae is
 						AdrSel <= '1';
 						MemRdEn <= '0';
 						MemWrEn <= '1';
-						IRWrEn <= '1';
+						IRWrEn <= '0';
 						WSel <= '0';
 						RegWrEn <= '0';
 						ALUSelA <= '1';
@@ -473,8 +541,6 @@ architecture RTL of mae is
 						SPSRWrEn <= '0';
 						ResWrEn <= '0';
 
-						ISR <= '0';
-
 						EtatFutur <= Etat1;
 
 					elsif EtatPresent = Etat17 then
@@ -518,8 +584,6 @@ architecture RTL of mae is
 						CPSRWrEn <= '1';
 						SPSRWrEn <= '0';
 						ResWrEn <= '0';
-
-						ISR <= '1';
 
 						EtatFutur <= Etat1;
 
