@@ -29,22 +29,26 @@ begin
       begin
       RESET <= '1';
       IRQ_SERV <= '0';
-
+      IRQ0 <= '0';
+      IRQ1 <= '0';
       wait for 10 ns;
       RESET <= '0';
       wait for 10 ns;
 
       IRQ1 <= '1';
+      wait for 15 ns;
       OK <= (VICPC = X"00000015");
       wait for 20 ns;
 
       IRQ1 <= '0';
       IRQ0 <= '1';
+      wait for 15 ns;
       OK <= (VICPC = X"00000009");
       wait for 20 ns;
 
-      IRQ1 <= '1';
-      OK <= (VICPC = X"00000015");
+      IRQ_SERV <= '1';
+      wait for 15 ns;
+      OK <= (VICPC = X"00000000");
       wait for 20 ns;
 
       wait;
@@ -52,7 +56,7 @@ begin
 
     VIC_TB : entity work.VIC port map(CLK => CLK,
     RESET => RESET,
-    IRQ_SERV => IRQ_SERV,
+    serv_irq => IRQ_SERV,
     IRQ0 => IRQ0,
     IRQ1 => IRQ1,
     IRQ => IRQ,
