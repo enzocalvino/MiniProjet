@@ -23,10 +23,10 @@ architecture RTL of mae is
 	Etat7, Etat8, Etat9,
 	Etat10, Etat11, Etat12,
 	Etat13, Etat14, Etat15,
-	Etat16, Etat17, Etat18);
+	Etat16, Etat17, Etat18, EtatDef);
 	Signal EtatPresent, EtatFutur : ETAT;
 
-	TYPE enum_instruction is (MOV, ADDi, ADDr, CMP, LDR, STR, BAL, BLT, BX);
+	TYPE enum_instruction is (MOV, ADDi, ADDr, CMP, LDR, STR, BAL, BLT, BX, DEF);
 	signal inst_mem_courante : enum_instruction;
 	signal inst_reg_courante : enum_instruction;
 
@@ -90,6 +90,10 @@ architecture RTL of mae is
 		 elsif INST_MEM(31 downto 24) = x"EB" then
 
 			inst_mem_courante <= BX;
+		 
+		 else 
+		   
+		  inst_mem_courante <= DEF;
 
 		 end if;
 
@@ -133,13 +137,17 @@ architecture RTL of mae is
 		 elsif INST_REG(31 downto 24) = x"EB" then
 
 			inst_reg_courante <= BX;
+			
+		 else 
+		   
+		  inst_reg_courante <= DEF;
 
 		 end if;
 
 	 end process instructionsREG;
 	 
 	 
-		etats: process(EtatPresent, IRQ, INST_MEM, inst_mem_courante, ISR)
+		etats: process(EtatPresent, IRQ, INST_MEM, inst_mem_courante, ISR, N)
 			begin
 
 				if EtatPresent = Etat1 then
@@ -189,11 +197,11 @@ architecture RTL of mae is
 
 								EtatFutur <= Etat3;
 
-							elsif inst_mem_courante = BAL or (inst_mem_courante = BLT and N = '1') then
+							elsif inst_mem_courante = BAL or (inst_mem_courante = BLT and N = '0') then
 
 								EtatFutur <= Etat4;
 
-							elsif (inst_mem_courante = BLT and N = '0') then
+							elsif (inst_mem_courante = BLT and N = '1') then
 
 								EtatFutur <= Etat5;
 
@@ -204,7 +212,8 @@ architecture RTL of mae is
 							elsif ISR = '1' and inst_mem_courante = BX then
 
 								EtatFutur <= Etat16;
-
+							else
+								EtatFutur <= EtatDef;
 							end if;
 
 				elsif  EtatPresent = Etat3 then
@@ -264,7 +273,7 @@ architecture RTL of mae is
 						WSel <= '0';
 						RegWrEn <= '0';
 						ALUSelA <= '0';
-						ALUSelB <= "10";
+						ALUSelB <= "11";
 						ALUOP <= "00";
 						CPSRSel <= '0';
 						CPSRWrEn <= '0';
@@ -308,7 +317,10 @@ architecture RTL of mae is
 						elsif inst_mem_courante = CMP then
 
 								EtatFutur <= Etat10;
-
+						else
+						
+								EtatFutur <= EtatDef;
+								
 						end if;
 
 				 elsif EtatPresent = Etat7 then
@@ -342,6 +354,9 @@ architecture RTL of mae is
 						elsif inst_mem_courante = ADDi then
 
 								EtatFutur <= Etat13;
+						else
+						
+								EtatFutur <= EtatDef;
 
 						end if;
 
@@ -553,14 +568,14 @@ architecture RTL of mae is
 						MemRdEn <= '0';
 						MemWrEn <= '0';
 						IRWrEn <= '0';
-						WSel <= '1';
-						RegWrEn <= '1';
+						WSel <= '0';
+						RegWrEn <= '0';
 						ALUSelA <= '0';
 						ALUSelB <= "00";
 						ALUOP <= "00";
 						CPSRSel <= '0';
-						CPSRWrEn <= '1';
-						SPSRWrEn <= '0';
+						CPSRWrEn <= '0';
+						SPSRWrEn <= '1';
 						ResWrEn <= '0';
 
 						EtatFutur <= Etat18;
@@ -575,17 +590,38 @@ architecture RTL of mae is
 						MemRdEn <= '0';
 						MemWrEn <= '0';
 						IRWrEn <= '0';
-						WSel <= '1';
-						RegWrEn <= '1';
+						WSel <= '0';
+						RegWrEn <= '0';
 						ALUSelA <= '0';
 						ALUSelB <= "00";
 						ALUOP <= "00";
 						CPSRSel <= '0';
-						CPSRWrEn <= '1';
+						CPSRWrEn <= '0';
 						SPSRWrEn <= '0';
 						ResWrEn <= '0';
 
 						EtatFutur <= Etat1;
+						
+					else
+					  
+					  irq_serv <= '0';
+						PCSel <= "00";
+						PCWrEn <= '1';
+						LRWrEn <= '0';
+						AdrSel <= '0';
+						MemRdEn <= '0';
+						MemWrEn <= '0';
+						IRWrEn <= '0';
+						WSel <= '0';
+						RegWrEn <= '0';
+						ALUSelA <= '0';
+						ALUSelB <= "00";
+						ALUOP <= "00";
+						CPSRSel <= '0';
+						CPSRWrEn <= '0';
+						SPSRWrEn <= '0';
+						ResWrEn <= '0';
+						EtatFutur <= EtatDef;
 
 					end if;
 

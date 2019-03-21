@@ -43,8 +43,8 @@ begin
 
 		transition: process(IRQ0_n, IRQ0_n_1, IRQ1_n, IRQ1_n_1, serv_irq, RESET)
 			begin
-			  if(RESET = '1') then
-			    IRQ0_memo <= '0';
+				if(RESET = '1') then
+					IRQ0_memo <= '0';
 					IRQ1_memo <= '0';
 				elsif(serv_irq = '1') then
 					IRQ0_memo <= '0';
@@ -53,11 +53,13 @@ begin
 				
 				if(IRQ0_n = '1' and IRQ0_n_1 = '0') then
 					IRQ0_memo <= '1';
-				end if;
 
-				if(IRQ1_n = '1' and IRQ1_n_1 = '0') then
+				elsif(IRQ1_n = '1' and IRQ1_n_1 = '0') then
 					IRQ1_memo <= '1';
+
 				end if;
+				
+				
 			end process transition;
 
 		requetes: process(IRQ0_memo, IRQ1_memo, reset)

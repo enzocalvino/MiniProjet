@@ -32,7 +32,7 @@ port map(clkt,irq0t,irq1t,rstt,res);
 
 --processus de simulation
  rstt<='0','1' after 25 ns,'0' after 35 ns;
-   generate_clock :process 
+   generate_clock :process
    begin 
      clkt<='0';
      wait for 10 ns;
@@ -47,9 +47,15 @@ port map(clkt,irq0t,irq1t,rstt,res);
      irq0t<='0';
      irq1t<='0';
      
-     wait for 500 ns;
+     wait for 400 ns;
      
      irq0t <='1';
+     --irq1t <= '1';
+     
+     wait for 200 ns;
+     
+     --irq0t <= '0';
+     --irq1t <= '0';
      
      wait;
    end process testbench;

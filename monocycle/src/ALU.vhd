@@ -27,6 +27,8 @@ begin
         Y <= std_logic_vector(signed(B) - signed(A));
       elsif OP = "11" then
         Y <= A after 1 ns;
+		else
+		  Y <= (others => '0');
       end if;
     end process;
   end behav;
