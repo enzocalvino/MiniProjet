@@ -46,6 +46,11 @@ begin
       OK <= (VICPC = X"00000009");
       wait for 20 ns;
 
+      IRQ1 <= '1';
+      wait for 15 ns;
+      OK <= (VICPC = X"00000009");
+      wait for 20 ns;
+
       IRQ_SERV <= '1';
       wait for 15 ns;
       OK <= (VICPC = X"00000000");

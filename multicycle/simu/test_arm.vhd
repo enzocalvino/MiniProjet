@@ -49,8 +49,8 @@ port map(clkt,irq0t,irq1t,rstt,res);
      
      wait for 400 ns;
      
-     irq0t <='1';
-     --irq1t <= '1';
+     --irq0t <='1';
+     irq1t <= '1';
      
      wait for 200 ns;
      
