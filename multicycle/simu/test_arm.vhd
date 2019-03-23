@@ -25,7 +25,7 @@ signal		res: std_logic_vector(31 downto 0);
 
 
 begin
- 
+
 --instanciation des composants
 arm_1: arm
 port map(clkt,irq0t,irq1t,rstt,res);
@@ -33,33 +33,31 @@ port map(clkt,irq0t,irq1t,rstt,res);
 --processus de simulation
  rstt<='0','1' after 25 ns,'0' after 35 ns;
    generate_clock :process
-   begin 
+   begin
      clkt<='0';
      wait for 10 ns;
      clkt<='1';
      wait for 10 ns;
-     
-     
+
+
    end process generate_clock;
-   
+
    testbench: process
    begin
      irq0t<='0';
      irq1t<='0';
-     
-     wait for 400 ns;
-     
-     --irq0t <='1';
-     irq1t <= '1';
-     
+
      wait for 200 ns;
-     
+
+     irq0t <='1';
+     --irq1t <= '1';
+
+     wait for 200 ns;
+
      --irq0t <= '0';
      --irq1t <= '0';
-     
+
      wait;
    end process testbench;
 
 end architecture arc_test_arm;
-
-
