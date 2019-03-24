@@ -20,7 +20,9 @@ Signal IRQ1_n, IRQ1_n_1,  IRQ1_memo : std_logic;
 begin
 	IRQ <= IRQ1_memo or IRQ0_memo;
 
-	echantillon: process(CLK, RESET)
+	-- Process permettant de recupèrer les nouvelles valeurs de IRQ0 et IRQ1 et d'enregistrer
+	-- les precedentes à l'aide des signaux IRQi_n_1
+	echantillon: process(CLK, RESET) 
 		begin
 
 			if RESET = '1' then
@@ -40,7 +42,9 @@ begin
 
 			end if;
 		end process echantillon;
-
+		
+		-- Process passant les signaux IRQi_memo à 1 s'il y a front montant entre la valeur de IRQi_n_1 et IRQi_n
+		-- IRQi_memo ne passe pas à 0 sans serv_irq à 1 ou s'il y a RESET.
 		transition: process(IRQ0_n, IRQ0_n_1, IRQ1_n, IRQ1_n_1, serv_irq, RESET)
 			begin
 				if(RESET = '1') then
@@ -61,7 +65,8 @@ begin
 				
 				
 			end process transition;
-
+		
+		-- Process attribuant la valeur de VICPC en fonction des signaux IRQi_memo 
 		requetes: process(IRQ0_memo, IRQ1_memo, reset)
 			begin
 				if(RESET = '1') then
