@@ -31,7 +31,7 @@ architecture RTL of mae is
 	signal inst_reg_courante : enum_instruction;
 
 	Signal ISR : std_logic;
-
+	-- EtatDef et instruction DEF afin d'éviter de créer des bascules D Latch
 	begin
 		horloge: process(CLK, RST)
 			begin
@@ -43,7 +43,7 @@ architecture RTL of mae is
 			elsif rising_edge(CLK) then
 
 				EtatPresent <= EtatFutur;
-				if(EtatPresent = Etat16) then
+				if(EtatPresent = Etat16) then -- ISR est un signal synchrone à l'horloge
 				  ISR <= '0';
 				elsif(EtatPresent = Etat18) then
 				  ISR <= '1';
@@ -51,7 +51,8 @@ architecture RTL of mae is
 
 			end if;
 		end process horloge;
-
+		
+		-- Process décodant les instructions provenant de la mémoire
 		instructionsMEM:process(INST_MEM)
 		 begin
 
@@ -99,6 +100,7 @@ architecture RTL of mae is
 
 	 end process instructionsMEM;
 	 
+	 -- Process provenant du registre IR
 	 instructionsREG:process(INST_REG)
 		 begin
 
@@ -146,8 +148,9 @@ architecture RTL of mae is
 
 	 end process instructionsREG;
 	 
-	 
-		etats: process(EtatPresent, IRQ, INST_MEM, inst_mem_courante, ISR, N)
+	 -- Process donnant la valeur des signaux de contrôle et du prochain Etat en fonction principalement
+	 -- de l'EtatPresent, de l'instruction courante
+	 etats: process(EtatPresent, IRQ, INST_MEM, inst_mem_courante, ISR, N)
 			begin
 
 				if EtatPresent = Etat1 then
